@@ -76,7 +76,15 @@
     {%- assign nav_children = nav_children | reverse -%}
   {%- endif -%}
 
+{%- if page.no_hr_before_toc != nil -%}
+  {%- assign no_hr_before_toc = page.no_hr_before_toc -%}
+{%- else -%}
+  {%- assign no_hr_before_toc = false -%}
+{%- endif -%}
+
+{%- if no_hr_before_toc == false -%}
 <hr>
+{%- endif -%}
 {% include toc_heading_custom.html %}
 <ul>
   {% for nav_child in nav_children %}

@@ -1,1 +1,18 @@
-<h2 class="text-delta">Table of contents</h2>
+{%- comment -%}
+  TOC heading can be set from the page.
+  toc_heading: "Table of contents", and default is "Table of contents".
+  toc_heading_class: "text-delta", and default is "text-delta".
+{%- endcomment -%}
+
+{%- if page.toc_heading_class -%}
+  {%- assign toc_heading_class = page.toc_heading_class -%}
+{%- else -%}
+  {%- assign toc_heading_class = "text-delta" -%}
+{%- endif -%}
+
+{%- if page.toc_heading -%}
+  {%- assign toc_heading = page.toc_heading -%}
+{%- else -%}
+  {%- assign toc_heading = "Table of contents" -%}
+{%- endif -%}
+<h2 class="{{toc_heading_class}}">{{toc_heading}}</h2>
