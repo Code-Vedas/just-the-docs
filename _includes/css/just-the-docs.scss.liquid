@@ -1,6 +1,12 @@
 {% if site.logo %}
 $logo: "{{ site.logo | relative_url }}";
 {% endif %}
+{% if site.logo_light %}
+$logo_light: "{{ site.logo_light | relative_url }}";
+{% endif %}
+{% if site.logo_dark %}
+$logo_dark: "{{ site.logo_dark | relative_url }}";
+{% endif %}
 @import "./support/support";
 @import "./custom/setup";
 @import "./color_schemes/light";

@@ -73,7 +73,7 @@ $spacers: (
   sp-7: $spacing-unit * 2.5,
   sp-8: $spacing-unit * 3,
   sp-9: $spacing-unit * 3.5,
-  sp-10: $spacing-unit * 4,
+  sp-10: $spacing-unit * 4
 ) !default;
 $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
 $sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
@@ -96,12 +96,12 @@ $border-color: $grey-lt-100 !default;
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 16.5rem !default;
-$nav-width-md: 15.5rem !default;
+$nav-width: 256px !default;
+$nav-width-md: 256px !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
-$content-width: 50rem !default;
+$content-width: 1200px !default;
 $header-height: 3.75rem !default;
 $search-results-width: $content-width - $nav-width !default;
 $transition-duration: 400ms;
@@ -109,9 +109,15 @@ $transition-duration: 400ms;
 // Media queries in pixels
 
 $media-queries: (
-  xs: 20rem,
-  sm: 31.25rem,
-  md: $content-width,
-  lg: $content-width + $nav-width,
-  xl: 87.5rem,
+  xs: 320px,
+  // Extra small devices (portrait phones)
+  sm: 576px,
+  // Small devices (landscape phones)
+  md: 768px,
+  // Medium devices (tablets)
+  lg: 992px,
+  // Large devices (desktops)
+  xl: 1200px,
+  // Extra large devices (large desktops)
+  xxl: 1400px // XXL devices (very large screens)
 ) !default;
