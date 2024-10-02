@@ -1,6 +1,8 @@
 // Buttons and things that look like buttons
 // stylelint-disable color-named
 
+@use "sass:color";
+
 .btn {
   display: inline-block;
   box-sizing: border-box;

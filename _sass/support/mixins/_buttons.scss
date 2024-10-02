@@ -1,4 +1,5 @@
 // Colored button
+@use "sass:color";
 
 @mixin btn-color($fg, $bg) {
   color: $fg;
@@ -6,7 +7,7 @@
   background-image: linear-gradient(lighten-color($bg, 5%), darken-color($bg, 2%));
   box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.25),
-    0 4px 10px rgba(0, 0, 0, 0.12);
+    0 4px 10px rgba(11, 10, 10, 0.12);
 
   &:hover,
   &.zeroclipboard-is-hover {
